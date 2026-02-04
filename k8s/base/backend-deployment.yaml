@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: backend
-        image: YOUR_DOCKERHUB/backend:v1
+        image: backend:v1
         ports:
         - containerPort: 5000

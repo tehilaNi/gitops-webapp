@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: YOUR_DOCKERHUB/frontend:v1
+        image: frontend:v1
         ports:
         - containerPort: 80
