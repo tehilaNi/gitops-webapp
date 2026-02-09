@@ -3,4 +3,4 @@ resources:
   - backend-deployment.yaml
   - backend-service.yaml
   - frontend-deployment.yaml
-  - base/frontend-service.yaml
+  - frontend-service.yaml
