@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: tehila124/frontend:v1
+        image: tehila124/frontend:v3
         ports:
         - containerPort: 80
