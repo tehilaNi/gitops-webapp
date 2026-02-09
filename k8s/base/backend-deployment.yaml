@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: backend
-        image: backend:v1
+        image: tehila124/backend:v1
         ports:
         - containerPort: 5000
