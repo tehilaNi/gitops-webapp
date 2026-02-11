@@ -4,7 +4,7 @@ metadata:
   name: backend
   namespace: gitops-demo
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: backend
@@ -15,6 +15,20 @@ spec:
     spec:
       containers:
       - name: backend
-        image: tehila124/backend:v1
+        image: tehila124/backend:v2
         ports:
         - containerPort: 5000
+        envFrom:
+        - configMapRef:
+            name: backend-config
+        env:
+        - name: APP_MESSAGE
+          valueFrom:
+            configMapKeyRef:
+              name: backend-config
+              key: APP_MESSAGE
+        - name: FEATURE_EVENTS_V2
+          valueFrom:
+            configMapKeyRef:
+              name: backend-config
+              key: FEATURE_EVENTS_V2    

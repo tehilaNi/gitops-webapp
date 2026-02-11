@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+  namespace: gitops-demo
+  labels:
+    app: backend
+    environment: production
+data:
+  APP_MESSAGE: "Hello from ConfigMap - Cloud Native Mode!"
+  FEATURE_EVENTS_V2: "true"  
